@@ -10,6 +10,20 @@ const config: Config = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'dark': '#0a0911',
+      'white': '#FFF',
+      'gray': '#1d1a23',
+      'gray2': '#cdcdcf',
+      'purp': {
+        '0': '#291a3b',
+        '1': '#1b1b3f',
+        '2': '#682b70',
+      },
+      'teal': '#146379',
+      'lilac': '#cb98fd',
+      'blue': '#87ccf6',
+      'red': '#e2838b',
+      'green': '#92d4a2',
       'shark': {
         '50': '#f5f5f6',
         '100': '#e6e6e7',
@@ -23,19 +37,6 @@ const config: Config = {
         '900': '#3c3c3d',
         DEFAULT: '#1d1d1e',
       },
-      'mercury': {
-        '50': '#f7f8f7',
-        DEFAULT: '#e6e8e6',
-        '200': '#daddda',
-        '300': '#bbbfba',
-        '400': '#959c94',
-        '500': '#788077',
-        '600': '#616960',
-        '700': '#4e564e',
-        '800': '#434943',
-        '900': '#3c3f3b',
-        '950': '#272a27',
-    },
     'woodsmoke': {
       '50': '#e9feff',
       '100': '#c9fcff',
@@ -62,6 +63,7 @@ const config: Config = {
     '900': '#86161c',
     '950': '#49060a',
 },
+'superdark': '#000609',
 
   
     
