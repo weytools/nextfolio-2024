@@ -2,7 +2,7 @@ export default function AboutBlock() {
   return (
     <div className="relative before:block before:absolute before:-inset-px before:bg-fin-blue before:rounded-lg before:accent-background-rotating">
 
-      <div className="border-gray border relative bg-fin-blue p-7 pt-6 rounded-lg flex flex-col gap-2 ">
+      <div className="border-fin-yellow/10 border relative bg-fin-blue p-7 pt-6 rounded-lg flex flex-col gap-2 ">
         {/* <div className="absolute top-2 left-2 z-1 aspect-square w-6 rounded-tl-md border-t border-l border-white/20 " />
         <div className="absolute top-2 right-2 z-1 aspect-square w-6 rounded-tr-md border-t border-r border-white/20 " />
         <div className="absolute bottom-2 left-2 z-1 aspect-square w-6 rounded-bl-md border-b border-l border-white/20 " />

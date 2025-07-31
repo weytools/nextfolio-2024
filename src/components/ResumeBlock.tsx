@@ -7,7 +7,7 @@ export default function ResumeBlock() {
   return (
     // <div className="bg-gray p-8 rounded-lg flex flex-col gap-2">
     // <div className="relative before:block before:absolute before:-inset-px before:bg-lilac before:rounded-lg before:accent-background-rotating">
-    <section className="w-full p-8 pt-7 relative rounded-lg  bg-fin-blue-light">
+    <section className="w-full p-8 pt-7 relative rounded-lg  bg-fin-blue">
 
       <div className="space-y-8">
         <div className="flex justify-between items-baseline">
@@ -49,7 +49,7 @@ function ResumeChunk({ dates, role, company, location, techs, responsibilities, 
           <p className={`inline-flex text-white/80 gap-x-3 items-center`}>
             <img className='w-4 h-4 inline' alt={`${company} logo`} src={icon} /><span className="text-white">{company}</span> <span>{location}</span></p>
           <ul className='flex flex-wrap flex-row gap-x-3 gap-y-2 mt-4'>
-            {techs.map((r, i) => <li key={i} className="bg-fin-blue text-white/60 text-xs font-medium tracking-wide rounded-2xl py-1 px-3">{r}</li>)}
+            {techs.map((r, i) => <li key={i} className="bg-fin-blue-light text-white/60 text-xs font-medium tracking-wide rounded-2xl py-1 px-3">{r}</li>)}
           </ul>
         </div>
       </div>
