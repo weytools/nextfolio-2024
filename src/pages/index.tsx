@@ -14,26 +14,26 @@ const sectionIds = ["about", "experience", "projects"];
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>(sectionIds[0]);
-  useEffect(() => {
-    let observer: IntersectionObserver | null = null;
-    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      // Find the entry closest to the top (with top >= 0)
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
-      if (visible.length > 0) {
-        console.log("Visible section:", visible[0].target.id);
-        setActiveSection(visible[0].target.id);
-      }
-    };
+  // useEffect(() => {
+  //   let observer: IntersectionObserver | null = null;
+  //   const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+  //     // Find the entry closest to the top (with top >= 0)
+  //     const visible = entries
+  //       .filter((entry) => entry.isIntersecting)
+  //       .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+  //     if (visible.length > 0) {
+  //       console.log("Visible section:", visible[0].target.id);
+  //       setActiveSection(visible[0].target.id);
+  //     }
+  //   };
 
-    observer = new IntersectionObserver(handleIntersect, { threshold: 0.2 });
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer && observer.disconnect();
-  }, []);
+  //   observer = new IntersectionObserver(handleIntersect, { threshold: 0.2 });
+  //   sectionIds.forEach((id) => {
+  //     const el = document.getElementById(id);
+  //     if (el) observer.observe(el);
+  //   });
+  //   return () => observer && observer.disconnect();
+  // }, []);
 
   return (
     // bg-gradient-to-b from-purp-0 to-purp-1
