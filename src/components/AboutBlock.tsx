@@ -8,11 +8,10 @@ export default function AboutBlock() {
         <div className="absolute bottom-2 left-2 z-1 aspect-square w-6 rounded-bl-md border-b border-l border-white/20 " />
         <div className="absolute right-2 bottom-2 z-1 aspect-square w-6 rounded-br-md border-r border-b border-white/20 " /> */}
         <h2 className="text-4xl font-semibold relative mb-4">A developer who knows business</h2>
-        <h3 className="text-white/80">I comfortably collaborate with any department. </h3>
-        <p className="text-white/80">Get me in your project kickoffs and I&rsquo;ll make sure code and campaign deliverables are absolutely <span className="text-white font-semibold tracking-wider">aligned.</span></p>
-        <p className="text-white/80">I am a husband, father of 3, and a DIY zealot. I love to learn, there is no project I will not take on:
+        <h3 className="text-white/80 lg:max-w-lg">I comfortably collaborate with any department,  I&rsquo;ll make sure code and campaign deliverables are <span className="text-white font-semibold tracking-wider">absolutely aligned.</span></h3>
+        <p className="text-white/80  lg:max-w-lg mb-2">I am a husband, homesteader, father of 3, and a DIY fanatic. <br />I love to learn, there is no project I will not take on:
         </p>
-        <ul className="relative list-disc list-image-[url(/checkmark.svg)] list-inside flex gap-x-16 gap-y-4 flex-wrap justify-center text-sm text-gray2">
+        <ul className="relative lg:max-w-lg list-disc list-image-[url(/checkmark.svg)] list-inside flex gap-x-16 gap-y-4 flex-wrap justify-center text-sm text-gray2">
           <li>HVAC</li>
           <li>electrical</li>
           <li>plumbing</li>

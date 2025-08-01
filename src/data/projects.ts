@@ -72,27 +72,27 @@ export const projects = [
         ],
         "footer": ['anime.js', 'ScrollMagic', 'JavaScript', 'SVG', 'Sass']
     },
-    {
-        "isDisabled": true,
-        "title": "Animated Infographic",
-        "image": "/projects/craziest.png",
-        "imageAlt": "project screenshot",
-        "subtitle": "Website",
-        "description": "Another successful interactive infographic! Handcoded based on static infographic design",
-        "buttons": [
-            {
-                "label": "View live site",
-                "ref": "https://www.emburse.com/learn/craziest-expenses-2021"
-            },
-            {
-                "label": "Source code",
-                "ref": "https://github.com/weytools/Craziest-Expenses-2021",
-                "isSource": true
-            }
+    // {
+    //     "isDisabled": true,
+    //     "title": "Animated Infographic",
+    //     "image": "/projects/craziest.png",
+    //     "imageAlt": "project screenshot",
+    //     "subtitle": "Website",
+    //     "description": "Another successful interactive infographic! Handcoded based on static infographic design",
+    //     "buttons": [
+    //         {
+    //             "label": "View live site",
+    //             "ref": "https://www.emburse.com/learn/craziest-expenses-2021"
+    //         },
+    //         {
+    //             "label": "Source code",
+    //             "ref": "https://github.com/weytools/Craziest-Expenses-2021",
+    //             "isSource": true
+    //         }
 
-        ],
-        "footer": ['anime.js', 'currency.js', 'JavaScript', 'SVG', 'CSS']
-    },
+    //     ],
+    //     "footer": ['anime.js', 'currency.js', 'JavaScript', 'SVG', 'CSS']
+    // },
     // {
     //     "title": "AP Automation ROI Calculator",
     //     "image": "/projects/ap-roi-calc.png",
@@ -155,11 +155,11 @@ export const projects = [
     //     "isDisabled": true
     // },
     {
-        "title": "Product Database & UI",
-        "image": "images/blits/cover-pic.jpg",
+        "title": "BLITS",
+        "image": "/projects/blits-cover.jpg",
         "imageAlt": "project screenshot",
         "subtitle": "Desktop App",
-        "description": "Normalized database and GUI, replacing handwritten audit system in a manufacturing plant! \nIncludes extra tools and custom calculators.",
+        "description": "Normalized database and GUI, replacing manual paper audit system in a bowling lane manufacturing plant. Includes extra tools and custom calculators.",
         "buttons": [
             {
                 "label": "Training Video",

@@ -85,7 +85,17 @@ body {
     background-position: top left;
   }
 }
-
+.animate-pulsebig {
+  animation-name: pulseBig;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulseBig {
+  50% {
+    opacity: 0.1;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

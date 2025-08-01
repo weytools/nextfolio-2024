@@ -32,9 +32,9 @@ function ProjectCard(props: ProjectInfo) {
           <span className="min-w-max rounded-md bg-fin-cream px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-fin-dark-blue">
             {props.subtitle}
           </span>
-          <span className="ml-2 rounded-md bg-fin-blue-light px-2 py-0.5 text-xs font-semibold text-fin-yellow">
+          {/* <span className="ml-2 rounded-md bg-fin-blue-light px-2 py-0.5 text-xs font-semibold text-fin-yellow">
             Full Stack
-          </span>
+          </span> */}
         </div>
         <h3 className="flex items-center gap-2 text-xl font-bold text-white">
           {props.title}
