@@ -33,7 +33,7 @@ export default function Home() {
       if (el) observer.observe(el);
     });
     return () => observer && observer.disconnect();
-  }, [sectionIds]);
+  }, []);
 
   return (
     // bg-gradient-to-b from-purp-0 to-purp-1
