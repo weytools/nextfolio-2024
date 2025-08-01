@@ -37,36 +37,44 @@ const config: Config = {
         '900': '#3c3c3d',
         DEFAULT: '#1d1d1e',
       },
-    'woodsmoke': {
-      '50': '#e9feff',
-      '100': '#c9fcff',
-      '200': '#99f7ff',
-      '300': '#54eeff',
-      '400': '#07dbff',
-      '500': '#00bdef',
-      '600': '#0095c9',
-      '700': '#0076a1',
-      '800': '#085f82',
-      '900': '#0c4e6d',
-      DEFAULT: '#000609',
-  },
-  'torch': {
-    '50': '#fff1f2',
-    '100': '#ffe0e2',
-    '200': '#ffc6c9',
-    '300': '#ff9fa4',
-    '400': '#ff676f',
-    DEFAULT: '#fb222e',
-    '600': '#e91925',
-    '700': '#c4111b',
-    '800': '#a2121a',
-    '900': '#86161c',
-    '950': '#49060a',
-},
-'superdark': '#000609',
+      'woodsmoke': {
+        '50': '#e9feff',
+        '100': '#c9fcff',
+        '200': '#99f7ff',
+        '300': '#54eeff',
+        '400': '#07dbff',
+        '500': '#00bdef',
+        '600': '#0095c9',
+        '700': '#0076a1',
+        '800': '#085f82',
+        '900': '#0c4e6d',
+        DEFAULT: '#000609',
+      },
+      'torch': {
+        '50': '#fff1f2',
+        '100': '#ffe0e2',
+        '200': '#ffc6c9',
+        '300': '#ff9fa4',
+        '400': '#ff676f',
+        DEFAULT: '#fb222e',
+        '600': '#e91925',
+        '700': '#c4111b',
+        '800': '#a2121a',
+        '900': '#86161c',
+        '950': '#49060a',
+      },
+      'superdark': '#000609',
+      // fin colors
+      'fin-dark-blue': '#020917',
+      'fin-blue': '#080f1e',
+      'fin-blue-light': '#0f182b',
+      'fin-orange': '#ff5600',
+      'fin-cream': '#f4f3ec',
+      'resend-blue': '#ffc446',
+      'fin-yellow': '#ffc446',
 
-  
-    
+
+
     },
     extend: {
       backgroundImage: {
@@ -74,6 +82,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      transitionProperty: {
+        'links': 'color, transform',
+      }
     },
   },
   plugins: [

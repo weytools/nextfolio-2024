@@ -25,12 +25,76 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
 @layer components {
-  .accent-background{
-    background: 
-    radial-gradient(ellipse at 10% -10%, rgba(104,43,112,1) 0%, rgba(104,43,112,0.1) 30%,transparent 40%),
-    radial-gradient(ellipse at 90% -10%, rgba(20, 99, 121,1) 0%, rgba(20, 99, 121,0.1) 30%,transparent 40%);
-    }
+  .accent-background {
+    /* background:
+      radial-gradient(
+        ellipse at 10% -10%,
+        rgba(104, 43, 112, 1) 0%,
+        rgba(104, 43, 112, 0.1) 30%,
+        transparent 40%
+      ),
+      radial-gradient(
+        ellipse at 90% -10%,
+        rgba(20, 99, 121, 1) 0%,
+        rgba(20, 99, 121, 0.1) 30%,
+        transparent 40%
+      ); */
+    background:
+      radial-gradient(
+        ellipse at 10% -10%,
+        rgba(104, 43, 112, 1) 0%,
+        rgba(104, 43, 112, 0.1) 30%,
+        transparent 40%
+      ),
+      radial-gradient(
+        ellipse at 90% -10%,
+        rgba(20, 99, 121, 1) 0%,
+        rgba(20, 99, 121, 0.1) 30%,
+        transparent 40%
+      );
+  }
+  .accent-background-rotating {
+    /* background: radial-gradient(rgba(20, 99, 121,1) 0%, rgba(20, 99, 121,0.1) 30%,transparent 40%) bottom left/200% 200%; */
+    background: radial-gradient(
+        circle,
+        rgb(255, 196, 70, 1) 0%,
+        rgba(255, 196, 70, 0.1) 20%,
+        transparent 30%
+      )
+      bottom left/200% 200%;
+
+    animation: colorChange 5s infinite linear;
+  }
+}
+@keyframes colorChange {
+  0% {
+    background-position: top left;
+  }
+  40% {
+    background-position: top right;
+  }
+  50% {
+    background-position: bottom right;
+  }
+  90% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+.animate-pulsebig {
+  animation-name: pulseBig;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulseBig {
+  50% {
+    opacity: 0.1;
+  }
 }
 @layer utilities {
   .text-balance {
