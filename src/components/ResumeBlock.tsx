@@ -7,7 +7,7 @@ export default function ResumeBlock() {
   return (
     // <div className="bg-gray p-8 rounded-lg flex flex-col gap-2">
     // <div className="relative before:block before:absolute before:-inset-px before:bg-lilac before:rounded-lg before:accent-background-rotating">
-    <section className="w-full p-8 pt-7 relative rounded-lg  bg-fin-blue">
+    <section className="w-full p-8 pt-7 relative rounded-lg  bg-fin-blue" id="experience">
 
       <div className="space-y-8">
         <div className="flex justify-between items-baseline">

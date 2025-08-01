@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import ContactLinks from "@/components/ContactLinks";
@@ -9,7 +10,31 @@ import ProjectsBlock from "@/components/ProjectsBlock";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const sectionIds = ["about", "experience", "projects"];
+
 export default function Home() {
+  const [activeSection, setActiveSection] = useState<string>(sectionIds[0]);
+  useEffect(() => {
+    let observer: IntersectionObserver | null = null;
+    const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+      // Find the entry closest to the top (with top >= 0)
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+      if (visible.length > 0) {
+        console.log("Visible section:", visible[0].target.id);
+        setActiveSection(visible[0].target.id);
+      }
+    };
+
+    observer = new IntersectionObserver(handleIntersect, { threshold: 0.2 });
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer && observer.disconnect();
+  }, [sectionIds]);
+
   return (
     // bg-gradient-to-b from-purp-0 to-purp-1
     <main className={` bg-gradient-to-b from-[#020711] to-[#01050C] text-white flex min-h-screen flex-col items-center justify-between py-4 px-2 lg:p-8 ${inter.className}`}>
@@ -17,7 +42,7 @@ export default function Home() {
       <div className="bg-fin-blue lg:bg-transparent flex-wrap flex lg:flex-nowrap lg:justify-between flex-auto container mx-auto rounded-2xl ">
         {/* px-8 pt-24 */}
         <div className=" rounded-l-2xl  items-start pt-16 lg:sticky lg:top-8 lg:flex lg:max-h-[calc(100vh-2rem)] lg:flex-col lg:justify-between  lg:max-w-lg flex-auto bg-fin-dark-blue lg:px-16">
-          <NavBlock />
+          <NavBlock activeSection={activeSection} />
           <ContactLinks />
         </div>
         <article className=" flex flex-col gap-24 max-w-5xl pb-8 pt-16 lg:px-16 bg-fin-blue rounded-r-2xl">
