@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import ContactLinks from "@/components/ContactLinks";
-import IntroBlock from "@/components/IntroBlock";
 import NavBlock from "@/components/NavBlock";
 import AboutBlock from "@/components/AboutBlock";
+import BentoBlock from "@/components/BentoBlock";
 import ResumeBlock from "@/components/ResumeBlock";
 import ProjectsBlock from "@/components/ProjectsBlock";
+import { DotOrbitComponent, MeshGradientComponent } from "@/components/paper-design";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export default function Home() {
           setActiveSection(entry.target.id);
         }
       });
-    }, { rootMargin: "0px", threshold: [1] });
+    }, { rootMargin: "0px", threshold: [.2] });
     setTimeout(() => {
       // Find and observe all elements
       sectionIds.forEach(id => {
@@ -39,17 +39,30 @@ export default function Home() {
 
   return (
     // bg-gradient-to-b from-purp-0 to-purp-1
-    <main className={` bg-gradient-to-b from-[#020711] to-[#01050C] text-white flex min-h-screen flex-col items-center justify-between py-4 px-2 lg:p-8 ${inter.className}`}>
-      {/* <div className="bg-dark accent-background flex-wrap flex lg:flex-nowrap lg:justify-between lg:gap-16 flex-auto container mx-auto px-8 rounded-2xl pt-24"> */}
+    <main className={` relative bg-gradient-to-b from-[#01223B] to-[#00080F] text-white flex min-h-[calc(100vh-2rem)] flex-col items-center justify-between py-4 px-2 lg:p-8 ${inter.className}`}>
+      {/* <MeshGradientComponent
+      colors={['#CAD2C5', '#2F3E46', '#354F52', '#ff5600']}
+      swirl={0.6}
+      distortion={0}
+      speed={0.2}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: 0,
+        width: "100%",
+        height: "100%",
+      }}
+    /> */}
       <div className="bg-fin-blue lg:bg-transparent flex-wrap flex lg:flex-nowrap lg:justify-between flex-auto container mx-auto rounded-2xl ">
         {/* px-8 pt-24 */}
-        <div className=" rounded-l-2xl  items-start pt-16 lg:sticky lg:top-8 lg:flex lg:max-h-[calc(100vh-2rem)] lg:flex-col lg:justify-between  lg:max-w-lg flex-auto bg-fin-dark-blue lg:px-16">
+        <div className=" rounded-l-2xl  items-start pt-16 lg:sticky lg:top-8 lg:flex lg:max-h-[calc(100vh-4rem)] lg:flex-col lg:justify-between  lg:max-w-lg flex-auto bg-fin-dark-blue lg:px-16">
           <NavBlock activeSection={activeSection} />
           <ContactLinks />
         </div>
-        <article className=" flex flex-col gap-24 max-w-5xl pb-8 pt-16 lg:px-16 bg-fin-blue rounded-r-2xl">
-          <IntroBlock />
-          <AboutBlock />
+        <article className="bg-fin-blue flex flex-col gap-24 max-w-5xl pb-8 pt-16 lg:px-16 rounded-r-2xl">
+          {/* <AboutBlock /> */}
+          <BentoBlock />
           <ResumeBlock />
           <ProjectsBlock />
         </article>

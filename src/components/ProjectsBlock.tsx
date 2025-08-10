@@ -41,8 +41,8 @@ function ProjectCard(props: ProjectInfo) {
           <span className="ml-3 h-0.5 flex-1 bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80" />
         </h3>
 
-        <div className="flex flex-row gap-8">
-          <div>
+        <div className="flex flex-row gap-8 flex-wrap lg:flex-nowrap">
+          <div className="order-1 lg:order-0 ">
             <div className="prose prose-sm prose-invert mb-2 mt-1 max-w-none text-white/90">
               {props.description}
             </div>
@@ -64,7 +64,7 @@ function ProjectCard(props: ProjectInfo) {
           <img
             src={props.image}
             alt={props.imageAlt}
-            className="h-full w-full object-contain md:w-64"
+            className="order-0 lg:order-1 h-full w-full object-contain md:w-64"
             loading="lazy"
           />
         </div>
