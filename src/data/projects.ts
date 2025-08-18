@@ -2,6 +2,7 @@ export type ProjectInfo = {
     title: string
     image: string
     imageAlt: string
+    video?: string
     subtitle: string
     description: string
     buttons: {
@@ -16,6 +17,7 @@ export const projects = [
         "title": "Spend Optimization Grader",
         "image": "/projects/spend-op-preview.jpg",
         "imageAlt": "project screenshot",
+        "video": "/projects/som-grader-vid.mp4",
         "subtitle": "Interactive Quiz",
         "description": "React quiz that asseses your companies current expense management automation. Fully animated, featuring easter egg interactions to encourage longer engagement. Collaborated on design with internal graphics department. ",
         "buttons": [
