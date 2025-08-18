@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { projects, ProjectInfo } from "@/data/projects";
-import { FileText } from "lucide-react";
+import { FileText, Play } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+
 export default function ResumeBlock() {
   return (
     // <div className="bg-gray p-8 rounded-lg flex flex-col gap-2">
@@ -41,8 +43,8 @@ function ProjectCard(props: ProjectInfo) {
           <span className="ml-3 h-0.5 flex-1 bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80" />
         </h3>
 
-        <div className="flex flex-row gap-8">
-          <div>
+        <div className="flex flex-row gap-8 flex-wrap lg:flex-nowrap">
+          <div className="order-1 lg:order-0 ">
             <div className="prose prose-sm prose-invert mb-2 mt-1 max-w-none text-white/90">
               {props.description}
             </div>
@@ -61,12 +63,20 @@ function ProjectCard(props: ProjectInfo) {
               )}
             </div>
           </div>
-          <img
-            src={props.image}
-            alt={props.imageAlt}
-            className="h-full w-full object-contain md:w-64"
-            loading="lazy"
-          />
+          {props.video ? (
+            <VideoPlayer
+              video={props.video}
+              image={props.image}
+              alt={props.imageAlt}
+            />
+          ) : (
+            <img
+              src={props.image}
+              alt={props.imageAlt}
+              className="order-0 lg:order-1 h-full w-full object-contain md:w-80 "
+              loading="lazy"
+            />
+          )}
         </div>
 
         <ul className="mt-4 flex flex-wrap gap-2">
@@ -83,14 +93,41 @@ function ProjectCard(props: ProjectInfo) {
     </div>
   );
 }
-// <div className="flex flex-row gap-6 items-baseline">
-//   <div className="bg-fin-cream  text-fin-dark-blue px-3 py-1 rounded-md text-xs font-bold inline uppercase tracking-tight min-w-max">{props.subtitle}</div>
-//   <div className="flex flex-col grow">
-//     <h3 className=" text-xl font-bold flex">{props.title}<div className="block bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80 flex-grow h-px w-auto mt-4 ml-8" /></h3>
-//     <p className={`inline-flex text-white/80 gap-x-3 items-center`}>
-//       <img className='w-4 h-4 inline' alt={`${props.imageAlt} logo`} src={props.image} /><span className="text-white">{props.title}</span> <span>{props.description}</span></p>
-//     <ul className='flex flex-wrap flex-row gap-x-3 gap-y-2 mt-4'>
-//       {props.footer.map((r, i) => <li key={i} className="bg-fin-blue text-white/60 text-xs font-medium tracking-wide rounded-2xl py-1 px-3">{r}</li>)}
-//     </ul>
-//   </div>
-// </div>
+
+function VideoPlayer({ video, image, alt }: { video: string; image: string; alt: string }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const startVideo = () => {
+    setIsPlaying(true);
+  };
+
+  return (
+    <div className="order-0 lg:order-1 relative h-full w-full flex-basis-[320px]">
+      {isPlaying ? (
+        <video
+          src={video}
+          className="h-full w-full object-contain  md:w-96 "
+          autoPlay
+          loop
+          muted
+          controls
+          playsInline
+        />
+      ) : (
+        <div className="relative cursor-pointer md:w-80 " onClick={startVideo}>
+          <img
+            src={image}
+            alt={alt}
+            className="h-full w-full object-contain"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity hover:bg-black/40">
+            <div className="rounded-full bg-fin-yellow p-3 text-fin-dark-blue shadow-lg transition-transform hover:scale-105">
+              <Play size={24} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

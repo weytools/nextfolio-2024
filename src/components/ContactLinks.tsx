@@ -9,7 +9,7 @@ export default function ContactLinks() {
         <h2 className="mt-auto text-center self-center text-white font-semibold px-4 text-transparent invisible">Get in touch</h2>
         <div className="shrink-0 block mt-2 bg-gradient-to-l from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
       </div>
-      <ul className="lg:ml-1 my-4 flex items-center justify-center gap-4 w-full text-white/80" aria-label="Social media">
+      <ul className="lg:ml-1 mt-4 mb-8 flex items-center justify-center gap-4 w-full text-white/80" aria-label="Social media">
         <li className="text-base shrink-0">
           <a
             className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"

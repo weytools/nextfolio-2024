@@ -27,6 +27,13 @@ body {
 }
 
 @layer components {
+  .gradient-background {
+    background-image: radial-gradient(
+      ellipse 80% 80% at 50% -20%,
+      #31526b69,
+      #fff0
+    );
+  }
   .accent-background {
     /* background:
       radial-gradient(
@@ -67,6 +74,9 @@ body {
 
     animation: colorChange 5s infinite linear;
   }
+  .glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
 }
 @keyframes colorChange {
   0% {
@@ -85,6 +95,18 @@ body {
     background-position: top left;
   }
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-194%);
+  }
+}
+
+.marquee {
+  animation: marquee 15s linear infinite;
+}
 .animate-pulsebig {
   animation-name: pulseBig;
   animation-duration: 2s;
@@ -99,5 +121,10 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .glass {
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(47, 62, 70, 0.75);
   }
 }

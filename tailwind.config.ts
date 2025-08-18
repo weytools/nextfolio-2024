@@ -65,13 +65,15 @@ const config: Config = {
       },
       'superdark': '#000609',
       // fin colors
-      'fin-dark-blue': '#020917',
-      'fin-blue': '#080f1e',
-      'fin-blue-light': '#0f182b',
-      'fin-orange': '#ff5600',
-      'fin-cream': '#f4f3ec',
+      'fin-dark-blue': '#012A4A',
+      'fin-blue': '#013A63',
+      'fin-blue-light': '#01497C',
+      'fin-blue-lighter': '#014F86',
+      'fin-blue-lighter2': '#0077B6',
+      'fin-orange': '#ffb703 ',
+      'fin-cream': '#EAF0F8',
       'resend-blue': '#ffc446',
-      'fin-yellow': '#ffc446',
+      'fin-yellow': '#ffb703 ',
 
 
 
