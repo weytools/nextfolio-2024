@@ -3,16 +3,16 @@ import { FileText, Mail, Phone, PhoneCall } from "lucide-react";
 export default function ContactLinks() {
   return (
     <div className="w-full relative">
-      <h2 className="mt-auto text-center self-center text-white/80 font-semibold px-2 z-10">Get in touch</h2>
+      <h2 className="mt-auto text-center self-center text-white/100 font-normal px-2 z-10">Get in touch</h2>
       <div className="flex -top-1 absolute w-full pointer-events-none ">
         <div className="shrink-0 block mt-2 bg-gradient-to-r from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
-        <h2 className="mt-auto text-center self-center text-white font-semibold px-4 text-transparent invisible">Get in touch</h2>
+        <h2 className="mt-auto text-center self-center text-white font-normal px-4 text-transparent invisible">Get in touch</h2>
         <div className="shrink-0 block mt-2 bg-gradient-to-l from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
       </div>
       <ul className="lg:ml-1 mt-4 mb-8 flex items-center justify-center gap-4 w-full text-white/80" aria-label="Social media">
         <li className="text-base shrink-0">
           <a
-            className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"
+            className="block hover:text-white  transition-links"
             href="https://www.linkedin.com/in/isaac-weymouth/"
             target="_blank"
             aria-label="LinkedIn (opens in a new tab)"
@@ -32,7 +32,7 @@ export default function ContactLinks() {
         </li>
         <li className="text-base shrink-0">
           <a
-            className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"
+            className="block hover:text-white  transition-links"
             href="mailto:isweymouth@gmail.com"
             aria-label="Email"
             title="Email"
@@ -43,7 +43,7 @@ export default function ContactLinks() {
         </li>
         <li className="text-base shrink-0">
           <a
-            className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"
+            className="block hover:text-white  transition-links"
             href="tel:2075777318"
             aria-label="Phone"
             title="Phone"
@@ -54,7 +54,7 @@ export default function ContactLinks() {
         </li>
         <li className="text-base shrink-0">
           <a
-            className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"
+            className="block hover:text-white  transition-links"
             href="/Resume-Isaac-Weymouth.pdf"
             target="_blank"
             aria-label="Resume (opens in a new tab)"
@@ -66,7 +66,7 @@ export default function ContactLinks() {
         </li>
         <li className="text-base shrink-0">
           <a
-            className="block hover:text-white hover:-translate-y-0.5 hover:scale-105 transition-links"
+            className="block hover:text-white  transition-links"
             href="https://github.com/weytools"
             target="_blank"
             aria-label="GitHub (opens in a new tab)"

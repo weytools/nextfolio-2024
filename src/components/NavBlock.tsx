@@ -8,16 +8,16 @@ const sections = [
 export default function NavBlock({ activeSection }: { activeSection: string }) {
   console.log('Active section:', activeSection);
   return (
-    <div className="lg:text-left text-center ">
+    <div className="lg:text-left text-center">
       <TaglineBlock />
-      <h1 className="text-5xl lg:text-5xl font-extrabold mb-4">
+      <h1 className="text-6xl text-balance font-normal relative mb-4 font-interTight">
         Isaac Weymouth
       </h1>
-      <h2 className="mb-6 text-lg tracking text-white/85 font-bold">
+      <h2 className="mb-6 text-lg tracking text-white/100 font-normal">
         Full stack developer{" "}
         <span className="text-white/65 font-normal">with a</span> business degree
       </h2>
-      <ul className="flex flex-col mt-24 gap-2 lg:gap-4 justify-center lg:justify-start text-lg font-semibold text-white/80">
+      <ul className="flex flex-col mb-14 lg:mb-0 lg:mt-24 gap-2 lg:gap-4 justify-center lg:justify-start text-lg font-normal text-white/80">
         {sections.map((section) => (
           <li
             key={section.id}><a href={`#${section.id}`}

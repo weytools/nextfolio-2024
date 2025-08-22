@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -67,12 +66,24 @@ body {
     background: radial-gradient(
         circle,
         rgb(255, 196, 70, 1) 0%,
-        rgba(255, 196, 70, 0.1) 20%,
+        rgba(255, 196, 70, 0.1) 15%,
         transparent 30%
       )
       bottom left/200% 200%;
 
     animation: colorChange 5s infinite linear;
+    clip-path: polygon(
+      0% 0%,
+      0% 100%,
+      1px 100%,
+      1px 1px,
+      calc(100% - 1px) 1px,
+      calc(100% - 1px) calc(100% - 1px),
+      1px calc(100% - 1px),
+      1px 100%,
+      100% 100%,
+      100% 0%
+    );
   }
   .glass-border {
     border: 1px solid rgba(255, 255, 255, 0.125);

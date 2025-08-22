@@ -7,20 +7,22 @@ export default function ResumeBlock() {
   return (
     // <div className="bg-gray p-8 rounded-lg flex flex-col gap-2">
     // <div className="relative before:block before:absolute before:-inset-px before:bg-lilac before:rounded-lg before:accent-background-rotating">
-    <section className="w-full p-8 pt-7 relative rounded-lg  bg-fin-blue" id="experience" >
+    <section className="w-full relative " id="experience" >
 
-      <div className="space-y-8">
-        <div className="flex justify-between items-baseline">
-          <h2 className="mb-4 text-3xl font-bold">Experience</h2>
+      <h2 className="mb-8 text-5xl font-normal font-interTight">Experience</h2>
+      <div className="rounded-lg p-8 pt-7  bg-fin-blue/50 backdrop-blur-3xl glass-border">
+        <div className="space-y-8">
+          <div className="flex justify-between items-baseline">
+          </div>
+          <div className="gap-y-12 flex flex-col">
+            {experience.map(e => <ResumeChunk key={e.dates} {...e} />)}
+          </div>
         </div>
-        <div className="gap-y-12 flex flex-col">
-          {experience.map(e => <ResumeChunk key={e.dates} {...e} />)}
-        </div>
-      </div>
-      <div className="mt-16 text-center">
-        <Link href="/Resume-Isaac-Weymouth.pdf" target="_blank" className="text-fin-dark-blue bg-fin-cream hover:brightness-125 transition-all inline-block py-2 px-4 rounded-2xl text-lg font-semibold">
-          <FileText className="inline align-top mr-1" /> Full Resume</Link>
+        <div className="mt-16 text-center">
+          <Link href="/Resume-Isaac-Weymouth.pdf" target="_blank" className="text-fin-cream border-fin-cream border bg-fin-cream/10 hover:brightness-125 hover:bg-fin-cream/15 transition-all inline-block py-2 px-4 rounded-lg text-lg font-semibold">
+            <FileText className="inline align-top mr-1" /> Full Resume</Link>
 
+        </div>
       </div>
     </section>
     // </div>
@@ -45,11 +47,13 @@ function ResumeChunk({ dates, role, company, location, techs, responsibilities, 
       <div className="flex flex-row gap-6 items-baseline">
         <div className="bg-fin-cream  text-fin-dark-blue px-3 py-1 rounded-md text-xs font-bold inline uppercase tracking-tight min-w-max">{dates}</div>
         <div className="flex flex-col grow">
-          <h3 className=" text-xl font-bold flex">{role}<div className="block bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80 flex-grow h-px w-auto mt-4 ml-8" /></h3>
-          <p className={`inline-flex text-white/80 gap-x-3 items-center`}>
+          <h3 className="mb-1  text-3xl font-medium font-interTight  flex">{role}
+            <div className="block bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80 flex-grow h-px w-auto mt-4 ml-8" />
+          </h3>
+          <p className={`inline-flex text-white/80 gap-x-3 items-center mb-2 text-balance`}>
             <img className='w-4 h-4 inline' alt={`${company} logo`} src={icon} /><span className="text-white">{company}</span> <span>{location}</span></p>
           <ul className='flex flex-wrap flex-row gap-x-3 gap-y-2 mt-4'>
-            {techs.map((r, i) => <li key={i} className="bg-fin-blue-light text-white/60 text-xs font-medium tracking-wide rounded-2xl py-1 px-3">{r}</li>)}
+            {techs.map((r, i) => <li key={i} className="rounded-2xl  bg-fin-blue-lighter/50 px-3 py-1 text-xs font-normal tracking-wide text-white/80">{r}</li>)}
           </ul>
         </div>
       </div>

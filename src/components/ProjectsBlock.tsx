@@ -8,10 +8,10 @@ export default function ResumeBlock() {
   return (
     // <div className="bg-gray p-8 rounded-lg flex flex-col gap-2">
     // <div className="relative before:block before:absolute before:-inset-px before:bg-lilac before:rounded-lg before:accent-background-rotating">
-    <section id="projects" className="relative w-full rounded-lg p-8 pt-7">
+    <section id="projects" className="relative w-full ">
       <div className="space-y-8">
         <div className="flex items-baseline justify-between">
-          <h2 className="mb-4 text-3xl font-bold">Projects</h2>
+          <h2 className="text-5xl font-normal font-interTight">Projects</h2>
         </div>
         <div className="flex flex-col gap-y-12">
           {projects.map((e) => (
@@ -27,7 +27,7 @@ export default function ResumeBlock() {
 
 function ProjectCard(props: ProjectInfo) {
   return (
-    <div className="group relative flex flex-col gap-6 rounded-2xl bg-fin-blue-light md:flex-row">
+    <div className="group relative flex flex-col gap-6 glass-border rounded-2xl bg-fin-blue-light/50 backdrop-blur-3xl md:flex-row">
       {/* Content */}
       <div className="flex flex-1 flex-col gap-2 p-5">
         <div className="mb-1 flex items-center gap-3">
@@ -38,17 +38,17 @@ function ProjectCard(props: ProjectInfo) {
             Full Stack
           </span> */}
         </div>
-        <h3 className="flex items-center gap-2 text-xl font-bold text-white">
+        <h3 className="flex items-center gap-2 text-3xl  font-interTight text-white font-medium">
           {props.title}
           <span className="ml-3 h-0.5 flex-1 bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80" />
         </h3>
 
         <div className="flex flex-row gap-8 flex-wrap lg:flex-nowrap">
           <div className="order-1 lg:order-0 ">
-            <div className="prose prose-sm prose-invert mb-2 mt-1 max-w-none text-white/90">
+            <div className="prose prose-sm prose-invert mb-2 mt-1 max-w-none text-white/90 mb-4">
               {props.description}
             </div>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {props.buttons.map((btn, i) =>
                 btn.ref ? (
                   <a
@@ -56,7 +56,7 @@ function ProjectCard(props: ProjectInfo) {
                     href={btn.ref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 rounded-xl border border-fin-yellow/30 bg-fin-yellow px-3 py-1 text-sm font-medium text-fin-dark-blue/90 shadow-sm transition-all hover:bg-fin-yellow/90 hover:text-fin-dark-blue ${btn.isSource ? "ring-2 ring-fin-yellow/60 ring-offset-2" : ""}`}
+                    className={`inline-flex items-center gap-2 rounded-lg border border-fin-yellow bg-fin-yellow/10 px-3 py-1 text-sm font-normal text-fin-yellow shadow-sm backdrop-blur-md transition-all hover:bg-fin-yellow/20  ${btn.isSource ? "ring-2 ring-fin-yellow/60 ring-offset-2" : ""}`}
                     dangerouslySetInnerHTML={{ __html: btn.label }}
                   />
                 ) : null,
@@ -83,7 +83,7 @@ function ProjectCard(props: ProjectInfo) {
           {props.footer.map((tech, i) => (
             <li
               key={i}
-              className="rounded-2xl border border-white/10 bg-fin-blue-light px-3 py-1 text-xs font-medium tracking-wide text-white/70"
+              className="rounded-2xl  bg-fin-blue-lighter2/40 px-3 py-1 text-xs font-normal tracking-wide text-white/80"
             >
               {tech}
             </li>

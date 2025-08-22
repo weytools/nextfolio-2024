@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["var(--font-inter)", "sans-serif"],
+      interTight: ["var(--font-inter-tight)", "sans-serif"],
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

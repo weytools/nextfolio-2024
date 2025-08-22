@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "favicon": "npx svg-to-ico public/icon.svg public/favicon.ico"
   },
   "prettier": {
     "objectWrap": "collapse",
