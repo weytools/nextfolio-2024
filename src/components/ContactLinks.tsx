@@ -3,10 +3,10 @@ import { FileText, Mail, Phone, PhoneCall } from "lucide-react";
 export default function ContactLinks() {
   return (
     <div className="w-full relative">
-      <h2 className="mt-auto text-center self-center text-white/100 font-normal px-2 z-10">Get in touch</h2>
+      <h2 className="mt-auto text-center self-center text-white/100 font-normal px-2 z-10">Details</h2>
       <div className="flex -top-1 absolute w-full pointer-events-none ">
         <div className="shrink-0 block mt-2 bg-gradient-to-r from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
-        <h2 className="mt-auto text-center self-center text-white font-normal px-4 text-transparent invisible">Get in touch</h2>
+        <h2 className="mt-auto text-center self-center text-white font-normal px-4 text-transparent invisible">Details</h2>
         <div className="shrink-0 block mt-2 bg-gradient-to-l from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
       </div>
       <ul className="lg:ml-1 mt-4 mb-8 flex items-center justify-center gap-4 w-full text-white/80" aria-label="Social media">

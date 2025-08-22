@@ -38,7 +38,7 @@ export const experience: ChunkInfo[] = [
     role: "Software Engineer",
     company: 'Panolam Surface Systems',
     location: 'Auburn, ME',
-    techs: ['C#', '.NET', 'ASP', 'SQL', 'WinForms', 'Agile'],
+    techs: ['C#', '.NET', 'ASP', 'SQL', 'WinForms', 'WPF'],
     responsibilities: [
       "Architect of a comprehensive audit system for a multi-line manufactured product. Sole full stack developer envisioning and executing a normalized database with a plant-wide, multi-user GUI using agile methodology.",
       "Authored numerous smaller scale, specific-case Windows utilities across all departments. Identified productivity bottlenecks across the manufacturing stream and created digital solutions to decongest the workflow. Using thoughtful UX design, I focus on operator ease of use and support with visual aids; software should do exactly what we expect."
@@ -50,7 +50,7 @@ export const experience: ChunkInfo[] = [
     role: "Web Stores Program Manager",
     company: 'Shads Advertising',
     location: 'Auburn, ME',
-    techs: ['JavaScript', 'PHP', 'CSS', 'Photoshop', 'Illustrator', 'InDesign'],
+    techs: ['jQuery', 'PHP', 'Adobe Creative Suite', 'Packing tape'],
     responsibilities: [
       "Created, piloted, and managed the web store program. Designed client web stores using branding guidelines and custom requests. JavaScript, PHP & CSS based; graphics done in Photoshop. ",
       "rocessed orders, managed timelines, maintained vendor relations; purchaser position. Periodic graphic design making proofs, mock-ups, and other promotional material: Photoshop, Illustrator, InDesign."
