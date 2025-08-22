@@ -18,10 +18,15 @@ export default function ResumeBlock() {
             {experience.map(e => <ResumeChunk key={e.dates} {...e} />)}
           </div>
         </div>
-        <div className="mt-16 text-center">
-          <Link href="/Resume-Isaac-Weymouth.pdf" target="_blank" className="text-fin-cream border-fin-cream border bg-fin-cream/10 hover:brightness-125 hover:bg-fin-cream/15 transition-all inline-block py-2 px-4 rounded-lg text-lg font-semibold">
-            <FileText className="inline align-top mr-1" /> Full Resume</Link>
-
+        <div className="mt-16 text-center text-base relative">
+          <Link href="/Resume-Isaac-Weymouth.pdf" target="_blank" className=" gap-2 inline-flex items-center text-fin-cream border-fin-cream border bg-fin-cream/10 hover:brightness-125 hover:bg-fin-cream/15 transition-all inline-block py-1 px-3 rounded-lg  font-medium">
+            <FileText className="inline  w-4 h-auto" />Full Resume
+          </Link>
+          <div className="flex -top-1 absolute w-full pointer-events-none ">
+            <div className="shrink-0 block mt-2 bg-gradient-to-r from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
+            <h2 className="mt-auto text-center self-center text-white font-normal text-transparent invisible py-1 px-8 "><FileText className="inline  w-4 h-auto" />Full Resume</h2>
+            <div className="shrink-0 block mt-2 bg-gradient-to-l from-white/20 via-white/50 to-white/50 flex-grow h-px rounded-full self-center" />
+          </div>
         </div>
       </div>
     </section>
@@ -45,10 +50,16 @@ function ResumeChunk({ dates, role, company, location, techs, responsibilities, 
   return (
     <>
       <div className="flex flex-row gap-6 items-baseline">
-        <div className="bg-fin-cream  text-fin-dark-blue px-3 py-1 rounded-md text-xs font-bold inline uppercase tracking-tight min-w-max">{dates}</div>
+
         <div className="flex flex-col grow">
+          <div className="flex items-center mb-1">
+            <div className=" text-fin-cream py-1 rounded-md text-xs inline uppercase font-interTight min-w-max">
+              {dates.replace(/-/g, `–`)}
+            </div>
+            <div className="block bg-gradient-to-l from-white/20 via-white/50 to-white/80 flex-grow h-px w-auto ml-2" />
+          </div>
           <h3 className="mb-1  text-3xl font-medium font-interTight  flex">{role}
-            <div className="block bg-gradient-to-l from-fin-yellow/20 via-fin-yellow/50 to-fin-yellow/80 flex-grow h-px w-auto mt-4 ml-8" />
+
           </h3>
           <p className={`inline-flex text-white/80 gap-x-3 items-center mb-2 text-balance`}>
             <img className='w-4 h-4 inline' alt={`${company} logo`} src={icon} /><span className="text-white">{company}</span> <span>{location}</span></p>
