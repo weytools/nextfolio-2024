@@ -63,10 +63,10 @@ const TaglineBlock = ({
       <MonitorCheck />
     </p>
 
-    <p className="mb-2 text-fin-orange/90">
+    <p className="mb-2 text-fin-orange/80 text-base">
       Turning{" "}
-      <span className="font-bold text-fin-orange">KPI&rsquo;s</span> into{" "}
-      <span className="font-bold text-fin-orange">API&rsquo;s</span>
+      <span className="font-normal text-fin-orange">KPI&rsquo;s</span> into{" "}
+      <span className="font-normal text-fin-orange">API&rsquo;s</span>
     </p>
   </div>
 );
