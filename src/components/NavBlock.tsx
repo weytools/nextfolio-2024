@@ -17,7 +17,7 @@ export default function NavBlock({ activeSection }: { activeSection: string }) {
         Full stack developer{" "}
         <span className="text-white/65 font-normal">with a</span> business degree
       </h2>
-      <ul className="flex flex-col mb-14 lg:mb-0 lg:mt-24 gap-2 lg:gap-4 justify-center lg:justify-start text-lg font-normal text-white/80">
+      <ul className="hidden lg:flex flex-col mb-14 lg:mb-0 lg:mt-24 gap-2 lg:gap-4 justify-center lg:justify-start text-lg font-normal text-white/80">
         {sections.map((section) => (
           <li
             key={section.id}><a href={`#${section.id}`}
@@ -63,7 +63,7 @@ const TaglineBlock = ({
       <MonitorCheck />
     </p>
 
-    <p className="mb-2 text-fin-orange/80 text-base">
+    <p className="mb-6 text-fin-orange/80 text-base">
       Turning{" "}
       <span className="font-normal text-fin-orange">KPI&rsquo;s</span> into{" "}
       <span className="font-normal text-fin-orange">API&rsquo;s</span>

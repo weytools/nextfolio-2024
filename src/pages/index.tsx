@@ -53,9 +53,9 @@ export default function Home() {
           `}
         </style>
       </Head>
-      <main className={`max-w-[100vw] relative gradient-background bg-[#01223B] text-white flex min-h-[calc(100vh-2rem)] flex-col items-center justify-between py-4 px-2 lg:p-8 font-sans`}>
+      <main className={`max-w-[100vw] relative gradient-background bg-[#01223B] text-white flex min-h-[calc(100vh-2rem)] flex-col items-center justify-between py-4 px-2 lg:p-8 font-sans antialiased`}>
         <MeshGradientComponent
-          colors={['#012A4A', '#012A4A', '#013A63', '#014F86', '#0077B6', '#ffb703']}
+          colors={['#012A4A', '#012A4A', '#013A63', '#014F86', '#0077B6', '#ffb703DD']}
           swirl={0.6}
           distortion={1}
           speed={0.3}
@@ -68,9 +68,9 @@ export default function Home() {
             height: "100%",
           }}
         />
-        <div className="max-w-full bg-fin-blue lg:bg-transparent flex-wrap flex lg:flex-nowrap lg:justify-between flex-auto container mx-auto rounded-lg ">
+        <div className="max-w-full bg-fin-blue lg:bg-transparent flex-wrap flex lg:flex-nowrap  flex-auto justify-center container mx-auto rounded-lg ">
           {/* px-8 pt-24 */}
-          <div className=" z-10  glass-border bg-fin-blue-light/50 backdrop-blur-2xl rounded-l-lg rounded-r-lg lg:rounded-r-none items-start pt-6 px-6 lg:pt-12 lg:px-12 xl:pt-16 lg:sticky lg:top-8 lg:flex lg:max-h-[calc(100vh-4rem)] lg:flex-col lg:justify-between  lg:max-w-lg flex-auto  xl:px-16">
+          <div className=" z-10   rounded-l-lg rounded-r-lg lg:rounded-r-none items-start pt-6 px-6 lg:pt-6 lg:px-8 lg:sticky lg:top-8 lg:flex lg:max-h-[calc(100vh-4rem)] lg:flex-col lg:justify-between  lg:max-w-md flex-auto ">
             <NavBlock activeSection={activeSection} />
             <ContactLinks />
           </div>
