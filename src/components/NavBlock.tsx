@@ -14,8 +14,7 @@ export default function NavBlock({ activeSection }: { activeSection: string }) {
         Isaac Weymouth
       </h1>
       <h2 className="mb-6 text-lg tracking text-white/100 font-normal">
-        Full stack developer{" "}
-        <span className="text-white/65 font-normal">with a</span> business degree
+        Full stack engineer <span className="text-white/65 font-normal">at</span> Emburse
       </h2>
       <ul className="hidden lg:flex flex-col mb-14 lg:mb-0 lg:mt-24 gap-2 lg:gap-4 justify-center lg:justify-start text-lg font-normal text-white/80">
         {sections.map((section) => (

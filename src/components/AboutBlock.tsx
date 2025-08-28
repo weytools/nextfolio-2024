@@ -16,12 +16,14 @@ export default function AboutBlock() {
         <div className="absolute top-2 right-2 z-1 aspect-square w-6 rounded-tr-md border-t border-r border-white/20 " />
         <div className="absolute bottom-2 left-2 z-1 aspect-square w-6 rounded-bl-md border-b border-l border-white/20 " />
         <div className="absolute right-2 bottom-2 z-1 aspect-square w-6 rounded-br-md border-r border-b border-white/20 " /> */}
-            <h2 className="text-6xl text-balance font-normal relative mb-6 font-interTight">A developer who knows business</h2>
-            <h3 className="text-white/80  text-lg font-light mb-2">I create solutions that <span className="text-white italic font-semibold ">match company goals</span>, and fit within current workflows.</h3>
-            <h3 className="text-white/80  text-lg font-light mb-2">I collaborate directly <span className="text-white font-semibold italic">with any department</span>, no engineering tranlations necessary.</h3>
-            <h3 className="text-white/80  text-lg font-light mb-2">I am an autodidactic <span className="text-white font-semibold tracking-wider italic">DIY fanatic</span> &ndash; there is no project I will not take on. Aside from programming, I practice:</h3>
+            <h2 className="text-6xl text-balance font-normal relative mb-6 font-interTight">A developer with business sense</h2>
+            <h3 className="text-white/80  text-lg font-light mb-2">I design and build <span className="text-white font-semibold italic">scalable systems</span> that bridge the gap from engineering to sales and marketing.</h3>
+            {/* <h3 className="text-white/80  text-lg font-light mb-2">I create solutions that <span className="text-white italic font-semibold ">match company goals</span>, and fit within current workflows.</h3> */}
+            <h3 className="text-white/80  text-lg font-light mb-2">I am collaborative, <span className="text-white font-semibold italic">cross-functional developer</span> with a skill for requirements elicitation.</h3>
+            {/* <h3 className="text-white/80  text-lg font-light mb-2">I collaborate directly <span className="text-white font-semibold italic">with any department</span>, no engineering tranlations necessary.</h3> */}
+            <h3 className="text-white/80  text-lg font-light mb-2">Autodidact by nature. From coding to carpentry, I love solving problems and <span className="text-white font-semibold tracking-wider italic">making things work</span>.</h3>
 
-            <Marquee gradient={false} autoFill={true} speed={120} gradientColor="#013A6355" gradientWidth={50} className="lg:max-w-sm xl:max-w-lg 2xl:max-w-full text-center mx-auto">
+            {/* <Marquee gradient={false} autoFill={true} speed={120} gradientColor="#013A6355" gradientWidth={50} className="lg:max-w-sm xl:max-w-lg 2xl:max-w-full text-center mx-auto">
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />electrical
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />plumbing
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />HVAC
@@ -29,7 +31,7 @@ export default function AboutBlock() {
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />small engines
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />appliance repair
               <Image src="/checkmark.svg" alt="" width={16} height={16} className="mr-2 ml-6" />midwifery
-            </Marquee>
+            </Marquee> */}
           </div>
         </div>
       </div>
